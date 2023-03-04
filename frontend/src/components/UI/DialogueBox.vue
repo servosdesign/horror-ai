@@ -74,6 +74,7 @@ textarea::placeholder{
   padding-top: 8px;
   padding-left: 0px;
   font-size: 12px;
+  color: black;
 }
 
 i {

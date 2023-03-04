@@ -9,7 +9,7 @@
         <div class="dialogue-line">
           <img
             class="master"
-            src="../../assets/images/master.png"
+            src="../../../assets/images/master.png"
           > {{ aiDialogueValue[0] }}
           <div
             v-if="firstLoad"
@@ -30,13 +30,13 @@
         >
           <img
             class="player"
-            src="../../assets/images/player.png"
+            src="../../../assets/images/player.png"
           > {{ userDialogue }}
         </div>
         <div class="dialogue-line">
           <img
             class="master"
-            src="../../assets/images/master.png"
+            src="../../../assets/images/master.png"
           > {{ aiDialogueValue[index + 1] }}
           <div
             v-if="loading && index === userDialogueValue.length - 1"
@@ -56,9 +56,11 @@
 
 <script>
 import { ref } from 'vue'
-import DialogueBox from '../UI/DialogueBox.vue'
-import LoadingSpinner from '../UI/LoadingSpinner.vue'
-import prompts from '../../assets/configs/prompt-config'
+import DialogueBox from '../../UI/DialogueBox.vue'
+import LoadingSpinner from '../../UI/LoadingSpinner.vue'
+import prompts from '../../../assets/configs/prompt-config'
+
+const test = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend risus id elementum fermentum. Vivamus finibus, lacus id aliquet tincidunt, libero neque luctus quam, sit amet imperdiet nisl orci porttitor libero. Nam pulvinar ex neque, eget congue orci volutpat eleifend. Aenean fringilla velit vel malesuada aliquet. Aliquam nulla felis, semper eu sem non, placerat porta lacus. Nam vitae eros non augue ultricies blandit. Ut eget mauris eget turpis faucibus ornare. Duis pulvinar elementum dui vitae viverra. Praesent cursus porta nunc, vel ullamcorper erat scelerisque id.'
 
 export default {
   components: {
@@ -74,7 +76,7 @@ export default {
   data  () {
     return {
       userDialogueValue: [],
-      aiDialogueValue: [],
+      aiDialogueValue: [test],
       themePrompt: prompts,
       startingPrompt: '',
       loading: false
@@ -82,7 +84,7 @@ export default {
   },
   created () {
     this.checkThemesSelected()
-    this.fetchAnswer('')
+    // this.fetchAnswer('')
   },
   methods: {
     fetchAnswer (enteredValue) {

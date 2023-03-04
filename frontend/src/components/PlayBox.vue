@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import StartScreen from './Screens/StartScreen.vue'
+import StartScreen from './Screens/Play/StartScreen.vue'
 
 export default {
   components: {

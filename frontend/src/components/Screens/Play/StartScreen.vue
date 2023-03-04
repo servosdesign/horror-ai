@@ -4,7 +4,7 @@
       <div class="header">
         <img
           class="master"
-          src="../../assets/images/master.png"
+          src="../../../assets/images/master.png"
         ><h1>Please pick a main theme for your Horror.ai experience.</h1>
       </div>
       <ul>
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import MainScreen from './MainScreen.vue'
+import MainScreen from './PlayScreen.vue'
 
 export default {
   components: {
